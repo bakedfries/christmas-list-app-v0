@@ -12,10 +12,17 @@ import {
 } from 'firebase/firestore';
 import { GiftItem, User } from '../types';
 
-// TODO: PASTE YOUR FIREBASE CONFIG HERE
-// Go to Firebase Console > Project Settings > General > Your Apps > Web
+// -----------------------------------------------------------
+// 🔴 IMPORTANT: PASTE YOUR KEYS BELOW
+// 1. Go to console.firebase.google.com
+// 2. Click Project Settings (Gear Icon) -> General
+// 3. Scroll to "Your Apps" -> Click the </> icon
+// 4. Copy the config object and paste it here:
+// -----------------------------------------------------------
+
 const firebaseConfig = {
-  apiKey: "REPLACE_WITH_YOUR_API_KEY",
+  // DELETE THESE LINES AND PASTE YOUR REAL KEYS HERE
+  apiKey: "REPLACE_WITH_YOUR_API_KEY", 
   authDomain: "REPLACE_WITH_YOUR_PROJECT_ID.firebaseapp.com",
   projectId: "REPLACE_WITH_YOUR_PROJECT_ID",
   storageBucket: "REPLACE_WITH_YOUR_PROJECT_ID.appspot.com",
@@ -24,11 +31,11 @@ const firebaseConfig = {
 };
 
 // Check if config is still default
-const isConfigConfigured = firebaseConfig.apiKey !== "REPLACE_WITH_YOUR_API_KEY";
+export const isDemoMode = firebaseConfig.apiKey === "REPLACE_WITH_YOUR_API_KEY";
 
 let db: any = null;
 
-if (isConfigConfigured) {
+if (!isDemoMode) {
   try {
     const app = initializeApp(firebaseConfig);
     db = getFirestore(app);

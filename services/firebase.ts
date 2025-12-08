@@ -12,22 +12,14 @@ import {
 } from 'firebase/firestore';
 import { GiftItem, User } from '../types';
 
-// -----------------------------------------------------------
-// 🔴 IMPORTANT: PASTE YOUR KEYS BELOW
-// 1. Go to console.firebase.google.com
-// 2. Click Project Settings (Gear Icon) -> General
-// 3. Scroll to "Your Apps" -> Click the </> icon
-// 4. Copy the config object and paste it here:
-// -----------------------------------------------------------
-
 const firebaseConfig = {
-  // DELETE THESE LINES AND PASTE YOUR REAL KEYS HERE
-  apiKey: "REPLACE_WITH_YOUR_API_KEY", 
-  authDomain: "REPLACE_WITH_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "REPLACE_WITH_YOUR_PROJECT_ID",
-  storageBucket: "REPLACE_WITH_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "REPLACE_WITH_SENDER_ID",
-  appId: "REPLACE_WITH_APP_ID"
+  apiKey: "AIzaSyBGWp79xsM3k-iM_TJl_rk02HznweqHz0k",
+  authDomain: "christmas-list-fa446.firebaseapp.com",
+  projectId: "christmas-list-fa446",
+  storageBucket: "christmas-list-fa446.firebasestorage.app",
+  messagingSenderId: "783572371512",
+  appId: "1:783572371512:web:bd0e217d4f40720d0d3ecd",
+  measurementId: "G-4BYYT9M04Y"
 };
 
 // Check if config is still default

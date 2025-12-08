@@ -30,11 +30,8 @@ const firebaseConfig = {
   storageBucket: "christmas-list-fa446.firebasestorage.app",
 
   messagingSenderId: "783572371512",
-
-  appId: "1:783572371512:web:bd0e217d4f40720d0d3ecd",
-
-  measurementId: "G-4BYYT9M04Y"
-
+  appId: "1:783572371512:web:855bd1b384eab2a90d3ecd",
+  measurementId: "G-KBSD1VZE8Q"
 };
 
 // Check if config is still default

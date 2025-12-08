@@ -21,17 +21,24 @@ import { GiftItem, User } from '../types';
 // -----------------------------------------------------------
 
 const firebaseConfig = {
-  // DELETE THESE LINES AND PASTE YOUR REAL KEYS HERE
-  apiKey: "REPLACE_WITH_YOUR_API_KEY", 
-  authDomain: "REPLACE_WITH_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "REPLACE_WITH_YOUR_PROJECT_ID",
-  storageBucket: "REPLACE_WITH_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "REPLACE_WITH_SENDER_ID",
-  appId: "REPLACE_WITH_APP_ID"
+  apiKey: "AIzaSyBGWp79xsM3k-iM_TJl_rk02HznweqHz0k",
+
+  authDomain: "christmas-list-fa446.firebaseapp.com",
+
+  projectId: "christmas-list-fa446",
+
+  storageBucket: "christmas-list-fa446.firebasestorage.app",
+
+  messagingSenderId: "783572371512",
+
+  appId: "1:783572371512:web:bd0e217d4f40720d0d3ecd",
+
+  measurementId: "G-4BYYT9M04Y"
+
 };
 
 // Check if config is still default
-export const isDemoMode = firebaseConfig.apiKey === "REPLACE_WITH_YOUR_API_KEY";
+export const isDemoMode = firebaseConfig.apiKey === "AIzaSyBGWp79xsM3k-iM_TJl_rk02HznweqHz0k";
 
 let db: any = null;
 

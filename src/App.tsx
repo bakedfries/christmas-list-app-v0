@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, Trash2, Check, Gift, ExternalLink, LogOut, AlertTriangle, Wand2, Lock } from 'lucide-react';
+import { Plus, Trash2, Check, Gift, ExternalLink, LogOut, AlertTriangle, Wand2, Lock, Info } from 'lucide-react';
 import Snowfall from './components/Snowfall';
 import AuthScreen from './components/AuthScreen';
 import Button from './components/Button';
@@ -201,9 +201,14 @@ function App() {
                 <h2 className="font-christmas text-3xl text-[#165B33]">
                   {viewingOwner?.name || 'Loading...'}
                 </h2>
-                <p className="text-gray-600 text-sm">
-                  {isViewingOwnList ? "Your personal wishlist" : "Add surprises they won't see!"}
-                </p>
+                <div className="text-gray-600 text-sm flex items-start gap-1 mt-1 max-w-[200px] md:max-w-none">
+                  <Info className="w-4 h-4 shrink-0 mt-0.5 text-[#165B33]" />
+                  <p>
+                    {isViewingOwnList 
+                      ? "You can't see who claimed your items (it's a surprise!)." 
+                      : "Claims are hidden from the owner. You can also add 'Surprise' items!"}
+                  </p>
+                </div>
              </div>
              <span className="text-5xl">{viewingOwner?.avatar}</span>
           </div>

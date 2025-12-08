@@ -2,7 +2,7 @@
   "name": "north-pole-lists",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/north-pole-lists",
+  "homepage": ".",
   "dependencies": {
     "@google/genai": "^0.0.12",
     "@types/node": "^16.18.38",

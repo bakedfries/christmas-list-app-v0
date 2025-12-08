@@ -2,10 +2,11 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { GeneratedGiftItem } from "../types";
 
 export const parseWishlistFromImage = async (dataUrl: string): Promise<GeneratedGiftItem[]> => {
-  const apiKey = process.env.API_KEY;
+  // REACT_APP_ prefix is required for Create React App to see the key in the browser
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   if (!apiKey) {
-    console.error("API Key is missing. Make sure API_KEY is in your environment variables.");
+    console.error("API Key is missing. Make sure REACT_APP_API_KEY is in your environment variables.");
     throw new Error("Missing API Key. Check console for details.");
   }
 
@@ -18,7 +19,7 @@ export const parseWishlistFromImage = async (dataUrl: string): Promise<Generated
   const mimeType = matches[1]; // e.g., "image/png"
   const base64Data = matches[2];
 
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: apiKey });
 
   try {
     const response = await ai.models.generateContent({
